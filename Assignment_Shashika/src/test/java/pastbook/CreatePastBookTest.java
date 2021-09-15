@@ -16,6 +16,8 @@ import pages.SignOutPage;
 import testData.PastBookTestData;
 import util.ScreenCast;
 
+import java.io.FileInputStream;
+
 public class CreatePastBookTest extends BasePage {
     private SignInPage signInPage;
     private CreateBookPage createBookPage;
@@ -37,7 +39,7 @@ public class CreatePastBookTest extends BasePage {
     public void verifyCreatePastBook() throws InterruptedException {
         createBookPage = new CreateBookPage();
         screenCast = new ScreenCast();
-        createBookPage.createBook(pastBookTestData.title(),pastBookTestData.filePath);
+        createBookPage.createBook(pastBookTestData.title(), pastBookTestData.filePath);
         Assert.assertEquals(createBookPage.verifyCreatePastBookSuccess(), "Here's your book with 1 moments!", "Book Creation fail");
         screenCast.captureScreen();
     }

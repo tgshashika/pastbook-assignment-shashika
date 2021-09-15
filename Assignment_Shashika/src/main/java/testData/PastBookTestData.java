@@ -1,5 +1,6 @@
 package testData;
 
+import java.io.File;
 import java.util.Random;
 
 public class PastBookTestData {
@@ -14,5 +15,6 @@ public class PastBookTestData {
     }
 
     // Upload Images file Path
-    public String filePath = "D:\\Automation\\Assignment_Shashika\\images\\image1.png";
+    File file = new File(".\\src\\images\\image1.png");
+    public String filePath = file.getAbsolutePath();
 }
